@@ -1,0 +1,188 @@
+:root {
+  --blue-theme-main-color: #1759de;
+  --blue-theme-sub-text-color: #e0dbc2c5;
+  --blue-theme-sub-text-color-alt: #d5e00bf2;
+  --blue-theme-background-color: #0d1117;
+}
+
+.about {
+  padding-top: 100px; /* Adjust to match your navbar height */
+  scroll-margin-top: 100px; /* Helps with anchor scrolling */
+}
+
+.about__content {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.about__content__personalWrapper,
+.about__content__servicesWrapper {
+  width: 50%;
+}
+
+.about__content__personalWrapper h3 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--blue-theme-sub-text-color);
+}
+
+.about__content__personalWrapper h3.personalInformationHeaderText {
+  padding-top: 20px;
+  font-size: 1.6rem;
+}
+
+.about__content__personalWrapper p {
+  color: var(--blue-theme-sub-text-color-alt);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--blue-theme-main-color);
+}
+
+.about__content__personalWrapper ul > li {
+  line-height: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.about__content__personalWrapper ul > li span.title,
+.about__content__personalWrapper ul > li span.value {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--blue-theme-main-color);
+  position: relative;
+  display: inline-block;
+  margin-right: 12px;
+  padding-bottom: 3px;
+  color: var(--blue-theme-sub-text-color);
+}
+
+.about__content__personalWrapper ul > li span.value {
+  border: none;
+  color: #e6e6e7c5;
+}
+
+.about__content__servicesWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__content__servicesWrapper__innerContent {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(150px, var(--blue-theme-main-color), transparent 90%);
+  position: relative;
+  border-radius: 50%;
+  border: 1.5px solid var(--blue-theme-main-color);
+  animation: floatRotatePulse 10s ease-in-out infinite;
+}
+
+/* Blob styles */
+.blob {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.7;
+  mix-blend-mode: screen;
+  animation: blobMove 6s ease-in-out infinite;
+}
+
+.about__content__servicesWrapper__innerContent div:nth-child(1) {
+  top: -9%;
+  left: 41%;
+  background: linear-gradient(135deg, #1759de, #58a6ff);
+  animation-delay: 0s;
+}
+
+.about__content__servicesWrapper__innerContent div:nth-child(2) {
+  right: -8%;
+  top: 41.5%;
+  background: linear-gradient(135deg, #ff6f91, #ff9671);
+  animation-delay: 1.5s;
+}
+
+.about__content__servicesWrapper__innerContent div:nth-child(3) {
+  bottom: -10%;
+  left: 41%;
+  background: linear-gradient(135deg, #ffc75f, #f9f871);
+  animation-delay: 3s;
+}
+
+.about__content__servicesWrapper__innerContent div:nth-child(4) {
+  left: -8%;
+  top: 41%;
+  background: linear-gradient(135deg, #00f5d4, #00b3b3);
+  animation-delay: 4.5s;
+}
+
+/* Animations */
+
+@keyframes blobMove {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(15px, -10px) scale(1.2);
+  }
+}
+
+@keyframes floatRotatePulse {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg) scale(1);
+  }
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 768px) {
+  .about__content {
+    flex-direction: column;
+  }
+
+  .about__content__personalWrapper,
+  .about__content__servicesWrapper {
+    width: 100%;
+  }
+
+  .about__content__servicesWrapper {
+    margin: 10px 0px;
+  }
+
+  .about__content__servicesWrapper__innerContent {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(120px, var(--blue-theme-main-color), transparent 120%);
+  }
+
+  .about__content__servicesWrapper__innerContent div:nth-child(1) {
+    top: -15%;
+    left: 38%;
+  }
+
+  .about__content__servicesWrapper__innerContent div:nth-child(2) {
+    right: -11%;
+    top: 40%;
+  }
+
+  .about__content__servicesWrapper__innerContent div:nth-child(3) {
+    bottom: -12%;
+    left: 40%;
+  }
+
+  .about__content__servicesWrapper__innerContent div:nth-child(4) {
+    left: -12%;
+    top: 40%;
+  }
+}

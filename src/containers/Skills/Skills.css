@@ -1,0 +1,110 @@
+.skills {
+  position: relative;
+  padding: 80px 20px 40px;
+  background-color: #2a3930;
+  min-height: 100vh;
+  color: #e308aa;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  box-sizing: border-box;
+  /* Add safe area inset for iOS / notch devices */
+  padding-bottom: calc(40px + env(safe-area-inset-bottom));
+}
+.skills__content-wrapper {
+  display: flex;
+  padding: 20px 0;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills__content-wrapper__inner-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 280px;
+  margin-bottom: 40px;
+}
+
+.skills__content-wrapper__inner-content__category-text {
+  display: inline-block;
+  color: #ffd403; /* Bright yellow accent */
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-bottom: 2px solid #ffd403; /* bright yellow border */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skills__content-wrapper__inner-content__category-text::before,
+.skills__content-wrapper__inner-content__category-text::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 5px;
+  background-color: #ffd403; /* bright yellow */
+  bottom: -1px;
+}
+
+.skills__content-wrapper__inner-content__category-text::before {
+  left: 0;
+}
+
+.skills__content-wrapper__inner-content__category-text::after {
+  right: 0;
+}
+
+.skills__content-wrapper__inner-content__progressbar-container {
+  width: 100%;
+}
+
+.progressbar-wrapper {
+  padding: 20px 0 0 0;
+}
+
+.progressbar-wrapper p {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #f0f0f0; /* light bright text */
+}
+
+/* Progress bar color override */
+.rc-progress-line {
+  stroke: #fff176 !important; /* lighter bright yellow */
+}
+
+/* Trail color lighter on dark background */
+.rc-progress-trail {
+  stroke: #f93f3f !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .skills {
+    padding: 70px 15px 40px;
+  }
+
+  .skills__content-wrapper {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .skills__content-wrapper__inner-content {
+    margin-bottom: 30px;
+    min-width: 100%;
+  }
+
+  .skills__content-wrapper__inner-content__category-text {
+    font-size: 18px;
+  }
+
+  .progressbar-wrapper p {
+    font-size: 1.2rem;
+  }
+}

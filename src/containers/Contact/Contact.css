@@ -1,0 +1,149 @@
+:root {
+    --blue-theme-background-color: #f0f8ff;
+    --blue-theme-main-color: #1d65d1;
+    --blue-theme-sub-text-color: #000000;
+    --blue-theme-nav-background-color: #ffffff;
+  }
+  
+  .contact__content {
+    padding: 20px;
+  }
+  
+  .contact__content__header-text {
+    color: var(--blue-theme-sub-text-color);
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1em;
+    letter-spacing: 0.5px;
+    position: relative;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-bottom: 2px solid var(--blue-theme-main-color);
+  }
+  
+  .contact__content__header-text::before,
+  .contact__content__header-text::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 5px;
+    background-color: var(--blue-theme-main-color);
+    bottom: -1px;
+  }
+  
+  .contact__content__header-text::before {
+    left: 0;
+  }
+  
+  .contact__content__header-text::after {
+    right: 0;
+  }
+  
+  .contact__content__form {
+    margin-top: 30px;
+  }
+  
+  .contact__content__form__controlswrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .contact__content__form__controlswrapper > div {
+    position: relative;
+  }
+  
+  .inputName,
+  .inputEmail,
+  .inputDescription {
+    width: 100%;
+    border: 2px solid var(--blue-theme-main-color);
+    padding: 20px 12px 8px 12px;
+    background-color: #e9ebe6;
+    color: #000000;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  textarea.inputDescription {
+    resize: none;
+    height: 120px;
+  }
+  
+  .nameLabel,
+  .emailLabel,
+  .descriptionLabel {
+    position: absolute;
+    left: 12px;
+    top: 16px;
+    font-size: 16px;
+    color: var(--blue-theme-main-color);
+    transition: all 0.2s ease;
+    pointer-events: none;
+    background-color: #e9ebe6;
+    padding: 0 4px;
+  }
+  
+  .inputName:focus + .nameLabel,
+  .inputName:not(:placeholder-shown) + .nameLabel,
+  .inputEmail:focus + .emailLabel,
+  .inputEmail:not(:placeholder-shown) + .emailLabel,
+  .inputDescription:focus + .descriptionLabel,
+  .inputDescription:not(:placeholder-shown) + .descriptionLabel {
+    top: -10px;
+    left: 10px;
+    font-size: 13px;
+    color: #0077cc;
+  }
+  
+  .contact__social {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .contact__social h4 {
+    color: var(--blue-theme-sub-text-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .contact__social__links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .contact__social__links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--blue-theme-main-color);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--blue-theme-main-color);
+    background-color: #ffffff;
+  }
+  
+  .contact__social__links a:hover {
+    background-color: var(--blue-theme-main-color);
+    color: #ace321;
+    border-color: var(--blue-theme-main-color);
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .contact__content__form {
+      text-align: center;
+    }
+  
+    .contact__content__form__controlswrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+  
