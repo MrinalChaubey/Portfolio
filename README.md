@@ -1,26 +1,32 @@
 # ✨ My Portfolio
 
-This is my personal portfolio website. It’s built entirely with frontend technologies and showcases who I am, what I do, and some of my work.
+This is my personal portfolio website. It highlights who I am, what I do, and some of my featured projects.
 
 ---
 
 ## 🚀 **Features**
 
-- Fully responsive design
-- Smooth navigation
+- Fully responsive, modern UI
+- Built with React components
 - About Me section
-- Projects section
-- Contact links or form
+- Projects showcase
+- Contact links
 
 ---
 
 ## 🛠️ **Tech Stack**
 
-- **HTML5**
+- **React**
 - **CSS3**
-- **JavaScript**
+- **JavaScript (ES6+)**
 
 *(No backend — purely static site)*
+
+---
+
+## 📂 **Project Structure**
+
+
 
 ---
 
